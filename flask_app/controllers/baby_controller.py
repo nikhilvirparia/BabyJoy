@@ -25,3 +25,25 @@ def dashboard():
     # all_paintings = Painting.get_all_paintings()
 
     # return render_template("dashboard.html", user=user, paintings=all_paintings)
+
+@app.route("/babyfood")
+def babyfood():
+    if not 'user_id' in session:
+        return redirect("/")
+
+    data = {
+        "user_id": session['user_id']
+    }
+    user = User.get_user_info(data)
+    return render_template("babyfood.html", user=user)
+
+# @app.route("/snacks")
+# def snack():
+#     if not 'user_id' in session:
+#         return redirect("/")
+
+#     data = {
+#         "user_id": session['user_id']
+#     }
+#     user = User.get_user_info(data)
+#     return render_template("snacks.html", user=user)

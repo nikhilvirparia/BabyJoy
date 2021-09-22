@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Source Sans Pro', sans-serif ;
+}
+#wrapper{
+    width: 920px;
+    height: 1200px;
+    padding: 10px;
+    margin: 0 auto;
+    background-color: #d3f2e2;
+}
+#navbar {
+    background-color: #d3f2e2;
+    display: flex;
+    align-items: center;
+   
+}
+#navicon{
+    transform: rotate(180deg);  
+    margin-left: 0px;
+    background-color: #d3f2e2;
+    height: 60px;
+    margin-right: 20px;
+}
+h1{
+margin-right: 20px;
+}
+.search{
+    width: 950px;
+    height: 30px;
+    border-radius: 80px;
+    padding: 5px;
+    
+}
+#rightside{
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px;
+}
+#rightside img{
+    height: 40px;
+}
+a:link {
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+    text-decoration: underline;
+}
+a:visited {
+    text-decoration: none;
+  }
+  
+
+#categories{
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    /* border-bottom: 5px solid black; */
+   text-decoration: none;
+}
+#title{
+    text-align: center;
+    margin: 20px;
+    font-size: 18pt;
+}
+#maininfo{
+    width:900px;
+    height: 550px;
+    display: flex;
+    margin: 0px;
+}
+#maininfo img{
+    width: 950px;
+    height: 600px;
+}
+.info{
+    width: 350px;
+    height: 230px;
+    padding: 30px;
+    color: white;
+    background-color:#d3f2e2;
+    text-align: center;
+    align-items: center;
+    
+}
+.info img{
+    width: 40px;
+}
+#bluecard{
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+}
+.mainpic{
+    width: 420px;
+    height: 290px;
+}
+ .mainpic2{
+    width:350px ;
+    height:190px;
+    margin-left: 20px; 
+} 
+
+.picarrow{
+    width: 20px;
+    background-color: #00bdb4;
+}
+h1{
+    text-align: center;
+}
+/* #bluecard2{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    background-color: #d3f2e2;
+    color: white;
+    width: 350px;
+    height: 85px;
+    text-align: center;
+    align-items: center;
+    margin-top: 10px;
+} */
+#foods{
+    width: 905px;
+    height: 200px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.popular{
+    width: 200px;
+    height:200px;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #0e9953;
+    
+
+}
+/* .plant img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    text-align: center;
+    margin-top: 10px; */
+/* } */
+#Alertbox{
+    display: flex;
+    align-items: center;
+    width: 920px;
+    height: 100px;
+    border: 3px solid black;
+}
+.alert {
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+}
+.accept{
+    margin: 10px;
+    width: 90px;
+    height: 30px;
+    background-color: #00bdb4;
+    color: white;
+    font-size: 14pt;
+    box-shadow: 5px 5px 5px black;
+    border: 2px solid black;
+}
