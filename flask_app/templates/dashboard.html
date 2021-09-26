@@ -12,6 +12,10 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
     <!-- linking a javascript file -->
     <script type="text/javascript" src="{{ url_for('static', filename='js/my_script.js') }}"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap" rel="stylesheet">
+    
 
     <title>Dashboard</title>
 </head>
@@ -20,13 +24,19 @@
     <div id="wrapper">
         <div id="navbar">
             <div id="navicon">
-                <img src="./images/logo.png" alt="">
+                <img src="./static/images/icon.png" alt="">
             </div>
-            <h1>BabyJoy</h1>
-            <input type="text" name="search" placeholder="Search for anything" class="search">
+            <h1><a href="/dashboard">BabyJoy</a></h1>
+            <form action="/search" method="POST">
+                <input type="text" name="search" class="search">
+                <input type="submit" value="search"class="btn btn-dark btn-sm" >
+            </form>
+                
             <div id="rightside">
-                <h3>Sign In</h3>
-                <img onclick="alert('your Cart is empty')" src="./static/images/cart-dark.png" alt="cart">
+                <h3>Hi {{user.first_name}}!</h3>
+                <a href="/logout" class="btn btn-dark btn-sm">Logout</a>
+                <a href="/addtocart">
+                    <img  src="{{ url_for('static', filename='images/cart-dark.png') }}" alt="cart"></a>
             </div>
         </div>
         <div id="categories">
@@ -41,66 +51,26 @@
         </div>
         <div id="maininfo">
             <img src="./static/images/Baby_Foods.jpg" alt="food">
-
-            <!-- <div class="info">
-                <img src="./static/images/Baby_Foods.jpg" alt="food">
-                <h2></h2>
-                <div id="bluecard">
-                    <h2></h2>
-                </div>
-            </div>
-            <img class="mainpic" src="./" alt="t">
-            <div class="info2">
-                <img class="mainpic2" src="./" alt="">
-                <div id="bluecard2">
-                    <h3>Soothing aloe</h3>
-                    <img class="picarrow" src="./" alt="arrow">
-                </div>
-            </div> -->
         </div>
         <h1>popular baby foods</h1>
         <div id="foods">
-            <div class="popular">
-                <a href="add"></a>
-            </div>
-            <div class="popular">
 
-            </div>
+            {% for i in range(4)%}
             <div class="popular">
-
+                <a href="/product/{{lists[i+3].itemId}}"><img src="{{lists[i+3].image}}" alt="baby">
+                    <p>{{lists[i+3].name}}: ${{lists[i+3].salePrice}}</p>
+                </a>
             </div>
-            <div class="popular">
-
-            </div>
-
+            {%endfor%}
         </div>
-        <!-- <div class="plant">
-                <img src="./images/assets/aeonium-s.jpg" alt="aloe">
-                <h3>Aloe</h3>
-            </div>
-            <div class="plant">
-                <img src="./images/assets/cactus-s.jpg" alt="cactus">
-                <h3>Cactus</h3>
-            </div>
-            <div class="plant">
-                <img src="./images/assets/echeveria-s.jpg" alt="echeveria-s">
-                <h3>Echeveria</h3>
-            </div>
-            <div class="plant">
-                <img src="./images/assets/sedum-s.jpg" alt="sedum-s">
-                <h3>Sedum</h3>
-            </div>
-            <div class="plant">
-                <img src="./images/assets/sempervivum-s.jpg" alt="sempervivum-s">
-                <h3>Sempervivum</h3>
-            </div>
+        <br>
+        <br>
+        <div class="feedback">
+            <h5>We’d love to hear what you think!</h5>
+            <input type="submit" value="Give Feedback" class="btn btn-primary">
         </div>
-            <div id="Alertbox">
-                <img class="alert" src="./images/assets/alert-dark.png" alt="alert">
-                <h3>This site makes use of third-party cookies, by clicking "I accept" you agree to the terms outlined
-                    in our <a href="#">cookie policy</a></h3>
-                <button class="accept" onclick="myFunction()">I accept</button>
-            </div> -->
+
+
     </div>
     <script src="script.js"></script>
 

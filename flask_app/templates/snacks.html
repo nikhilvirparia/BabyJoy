@@ -12,6 +12,9 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
     <!-- linking a javascript file -->
     <script type="text/javascript" src="{{ url_for('static', filename='js/my_script.js') }}"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap" rel="stylesheet">
 
     <title>Dashboard</title>
 </head>
@@ -20,19 +23,67 @@
     <div id="wrapper">
         <div id="navbar">
             <div id="navicon">
-                <img src="./images/logo.png" alt="">
+                <img src="./static/images/icon.png" alt="">
             </div>
-            <h1>BabyJoy</h1>
-            <input type="text" name="search" placeholder="Search for anything" class="search">
+            <h1><a href="/dashboard">BabyJoy</h1></a>
+            <form action="/search" method="POST">
+                <input type="text" name="search" class="search">
+                <input type="submit" value="search"class="btn btn-dark btn-sm" >
+            </form>
             <div id="rightside">
-                <h3>Sign In</h3>
-                <img onclick="alert('your Cart is empty')" src="./static/images/cart-dark.png" alt="cart">
+                <h3>Hi {{user.first_name}}!</h3>
+                <a href="/logout" class="btn btn-dark btn-sm">Logout</a>
+                <a href="/addtocart">
+                    <img  src="{{ url_for('static', filename='images/cart-dark.png') }}" alt="cart"></a>
             </div>
         </div>
         <div id="categories">
-            <h3><a href="/BabyFood">Baby Food</a></h3>
-            <h3><a href="/Snacks">Snacks</a></h3>
-            <h3><a href="/Formula">Formula</a></h3>
-            <h3><a href="/OrganicFood">Organic Food</a></h3>
-            
+            <h3><a href="/babyfood">Baby Food</a></h3>
+            <h3><a href="/snacks">Snacks</a></h3>
+            <h3><a href="/formula">Formula</a></h3>
+            <h3><a href="/organicfood">Organic Food</a></h3>
         </div>
+        <br>
+       
+        <div id="foods">
+            {% for i in range(4)%}
+                <div class="popular"> 
+                    <a href="/product/{{lists[i].itemId}}"><img src="{{lists[i].icon}}" 
+                    alt="baby">
+                    <p>{{lists[i].name}}:  ${{lists[i].salePrice}}</p>
+                </a>
+                </div>
+                {%endfor%}
+            </div>
+            <div id="foods">
+            
+                {% for i in range(4)%}
+                <div class="popular"> 
+                    <a href="/product/{{lists[i+4].itemId}}"><img src="{{lists[i+4].icon}}" 
+                    alt="baby">
+                    <p>{{lists[i+4].name}}:  ${{lists[i
+                        +4].salePrice}}</p>
+                </a>
+                </div>
+                {%endfor%}
+            </div>
+            <div id="foods">
+            
+                {% for i in range(4)%}
+                <div class="popular"> 
+                    <a href="/product/{{lists[i+8].itemId}}"><img src="{{lists[i+8].icon}}" 
+                    alt="baby">
+                    <p>{{lists[i+8].name}}:  ${{lists[i+8].salePrice}}</p>
+                </a>
+                </div>
+                {%endfor%}
+            </div>
+    <br>
+    <div class="feedback">
+    <h5>We’d love to hear what you think!</h5>
+    <input type="submit" value="Give Feedback" class="btn btn-primary">
+</div>
+    
+    </div>
+</body>
+</html>

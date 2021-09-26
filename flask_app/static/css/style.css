@@ -1,37 +1,54 @@
 *{
     margin: 0;
     padding: 0;
-    font-family:'Source Sans Pro', sans-serif ;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 #wrapper{
-    width: 920px;
-    height: 1200px;
-    padding: 10px;
+    width: 1000px;
+    height: 1300px;
+    /* padding: 10px; */
     margin: 0 auto;
     background-color: #d3f2e2;
+    color: black;
 }
 #navbar {
-    background-color: #d3f2e2;
+    background-color: #f7f7f7;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-   
+    font-family: 'Love Ya Like A Sister', cursive;
+    padding: 5px;
 }
-#navicon{
-    transform: rotate(180deg);  
+/* .slogan{
+    font-family: 'Courgette', cursive;
+    font-size: 8pt;
+    display: flex-wrap;
+} */
+h1{
+    font-family: 'Love Ya Like A Sister', cursive;
+    color: #0d6efd;
+}
+#navicon img{
     margin-left: 0px;
     background-color: #d3f2e2;
-    height: 60px;
-    margin-right: 20px;
+    height: 65px;
+    width: 70px;
+    margin-right: 0;
 }
 h1{
 margin-right: 20px;
+margin-left: -10px;
 }
 .search{
-    width: 950px;
+    width: 350px;
     height: 30px;
     border-radius: 80px;
     padding: 5px;
-    
+    font-family: 'Love Ya Like A Sister', cursive;
+}
+.btn.btn-dark.btn-sm{
+    font-family: 'Love Ya Like A Sister', cursive;
 }
 #rightside{
     width: 300px;
@@ -52,35 +69,47 @@ a:hover {
 }
 a:visited {
     text-decoration: none;
-  }
-  
+}
 
-#categories{
+h3{
+    font-family: 'Love Ya Like A Sister', cursive;
+    color: #0d6efd;
+}
+#categories {
     height: 40px;
     display: flex;
     justify-content: space-between;
     /* border-bottom: 5px solid black; */
-   text-decoration: none;
+    text-decoration: none;
+    padding: 20px;
+}
+a{
+    font-family: 'Love Ya Like A Sister', cursive;
+    
 }
 #title{
     text-align: center;
     margin: 20px;
     font-size: 18pt;
+    /* font-family: 'Love Ya Like A Sister', cursive; */
 }
 #maininfo{
-    width:900px;
+    width:1000px;
     height: 550px;
     display: flex;
     margin: 0px;
+    padding: 0;
 }
 #maininfo img{
-    width: 950px;
+    width: 1000px;
     height: 600px;
+    /* margin-left: 30px; */
+    
 }
 .info{
     width: 350px;
     height: 230px;
-    padding: 30px;
+    /* padding: 30px; */
     color: white;
     background-color:#d3f2e2;
     text-align: center;
@@ -90,84 +119,94 @@ a:visited {
 .info img{
     width: 40px;
 }
-#bluecard{
-    display: flex;
-    justify-content: center;
-    margin: 40px;
-}
-.mainpic{
-    width: 420px;
-    height: 290px;
-}
- .mainpic2{
-    width:350px ;
-    height:190px;
-    margin-left: 20px; 
-} 
-
-.picarrow{
-    width: 20px;
-    background-color: #00bdb4;
-}
 h1{
     text-align: center;
 }
-/* #bluecard2{
-    display: flex;
-    justify-content: center;
-    margin: 20px;
-    background-color: #d3f2e2;
-    color: white;
-    width: 350px;
-    height: 85px;
-    text-align: center;
-    align-items: center;
-    margin-top: 10px;
-} */
 #foods{
     width: 905px;
-    height: 200px;
+    height: 320px;
     text-align: center;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-left: 50px;
+    padding: 20px;
+    
 
 }
 .popular{
     width: 200px;
-    height:200px;
+    height:300px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+#card{
+    width: 800px;
+    height: 400px;
+    display: flex;
+    gap: 60px;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    margin-left: 90px;
+}
+.productimage img{
+    width:350px;
+    height:350px;
     padding: 10px;
-    margin-top: 10px;
-    background-color: #0e9953;
-    
 
 }
-/* .plant img{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    text-align: center;
-    margin-top: 10px; */
-/* } */
-#Alertbox{
-    display: flex;
-    align-items: center;
-    width: 920px;
-    height: 100px;
-    border: 3px solid black;
+.productdetails{
+    width: 300px;
+    height: 300px;
+    
 }
-.alert {
-    width: 60px;
-    height: 60px;
-    margin: 10px;
-}
-.accept{
-    margin: 10px;
-    width: 90px;
-    height: 30px;
-    background-color: #00bdb4;
-    color: white;
+h2{
     font-size: 14pt;
-    box-shadow: 5px 5px 5px black;
-    border: 2px solid black;
+}
+p{
+    color: black;
+}
+
+.description{
+    width: 800px;
+    margin-left: 90px;
+    background-color: white;
+    font-size: 11pt;
+    padding: 10px;
+}
+.feedback{
+    text-align: center;
+
+
+}
+h6{
+    font-size: 16pt;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align:center;
+}
+.addcart{
+    width: 800px;   
+    height: 200px;
+    border: 3px solid #d3f2e2;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 100px;
+    align-items: center;
+}
+.cartdetails{
+    width: 400px;
+    height: 200px;
+    justify-content: center;
+    margin-top: 30px;
+}
+h4{
+    text-align: center;
+}
+.button{
+    text-align: right;
+    margin-right: 100px;
 }

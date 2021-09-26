@@ -30,6 +30,7 @@
                 <input type="text" name="search" class="search">
                 <input type="submit" value="search"class="btn btn-dark btn-sm" >
             </form>
+            </form>
             <div id="rightside">
                 <h3>Hi {{user.first_name}}!</h3>
                 <a href="/logout" class="btn btn-dark btn-sm">Logout</a>
@@ -43,44 +44,45 @@
             <h3><a href="/formula">Formula</a></h3>
             <h3><a href="/organicfood">Organic Food</a></h3>
         </div>
-        <br>
-        <div id="foods">
-            {% for i in range(4)%}
-                <div class="popular"> 
-                    <a href="/product/{{lists[i].itemId}}"><img src="{{lists[i].icon}}" 
-                    alt="baby">
-                    <p>{{lists[i].name}}:  ${{lists[i].salePrice}}</p>
-                </a>
-                </div>
-                {%endfor%}
-            </div>
-            <div id="foods">
-            
-                {% for i in range(4)%}
-                <div class="popular"> 
-                    <a href="/product/{{lists[i+4].itemId}}"><img src="{{lists[i+4].icon}}" 
-                    alt="baby">
-                    <p>{{lists[i+4].name}}:  ${{lists[i
-                        +4].salePrice}}</p>
-                </a>
-                </div>
-                {%endfor%}
-            </div>
-            <div id="foods">
-            
-                {% for i in range(4)%}
-                <div class="popular"> 
-                    <a href="/product/{{lists[i+8].itemId}}"><img src="{{lists[i+8].icon}}" 
-                    alt="baby">
-                    <p>{{lists[i+8].name}}:  ${{lists[i+8].salePrice}}</p>
-                </a>
-                </div>
-                {%endfor%}
-            </div>
     <br>
+    <div id="foods">
+        {% for i in range(4)%}
+            <div class="popular"> 
+                <a href="/product/{{lists[i].itemId}}"><img src="{{lists[i].icon}}" 
+                alt="baby">
+                <p>{{lists[i].name}}:  ${{lists[i].salePrice}}</p>
+            </a>
+            </div>
+            {%endfor%}
+        </div>
+        <div id="foods">
+        
+            {% for i in range(4)%}
+            <div class="popular"> 
+                <a href="/product/{{lists[i+4].itemId}}"><img src="{{lists[i+4].icon}}" 
+                alt="baby">
+                <p>{{lists[i+4].name}}:  ${{lists[i
+                    +4].salePrice}}</p>
+            </a>
+            </div>
+            {%endfor%}
+        </div>
+        <div id="foods">
+        
+            {% for i in range(4)%}
+            <div class="popular"> 
+                <a href="/product/{{lists[i+8].itemId}}"><img src="{{lists[i+8].icon}}" 
+                alt="baby">
+                <p>{{lists[i+8].name}}:  ${{lists[i+8].salePrice}}</p>
+            </a>
+            </div>
+            {%endfor%}
+        </div>
+<br>
         <div class="feedback">
             <h5>We’d love to hear what you think!</h5>
             <input type="submit" value="Give Feedback" class="btn btn-primary">
         </div>
-    
     </div>
+</body>
+</html>

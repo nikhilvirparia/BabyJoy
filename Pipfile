@@ -7,6 +7,9 @@ name = "pypi"
 flask = "*"
 pymysql = "*"
 flask-bcrypt = "*"
+pycryptodome = "*"
+requests = "*"
+google-search-results = "*"
 
 [dev-packages]
 
